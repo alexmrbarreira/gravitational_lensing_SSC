@@ -35,3 +35,11 @@ Maps of the SSC and G+cNG contributions
 
 <img src="figures/fig_cov_l1l2_maps.png" width="1000" height=auto/>
 
+A few slices of the covariance matrix terms
+
+<img src="figures/fig_cov_l1l2_slices.png" width="1000" height=auto/>
+
+Contributions along the diagonal and impact on the signal-to-noise ratio
+
+<img src="figures/fig_cov_l1l2_diagonal.png" width="1000" height=auto/>
+
