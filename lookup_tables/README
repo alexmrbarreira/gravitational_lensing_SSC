@@ -1,0 +1,16 @@
+
+
+	These tables were generated elsewhere for the fiducial cosmology:
+
+		Omega_m h^2  = 0.14695
+		Omega_b h^2  = 0.02205
+		h            = 0.7
+                ns           = 0.96
+                sigma_8(z=0) = 0.83
+
+
+	The tables contain power spectra, their first and second derivatives w.r.t. k, and the growth-only response functions G1, G2 and GK.
+
+	For the spectra, there is the option in ../prepare_for_lensing.py to choose between CAMB or the Coyote emulator.
+
+	For the responses, they come from separate universe simulation measurements.
