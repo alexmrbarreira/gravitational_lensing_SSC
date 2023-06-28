@@ -21,12 +21,10 @@ to demonstrate the accuracy of analytical approaches to the covariance matrix fo
 ### Code overview
 
 - *prepare_for_lensing.py* defines global parameters, variables and functions
-- *compute_lensing_G.py* evaluates the G term
-- *compute_lensing_cNG.py* evaluates the cNG term
-- *compute_lensing_SSC.py* evaluates the SSC term
+- *compute_lensing_G.py*, *compute_lensing_cNG.py* and *compute_lensing_SSC.py* evaluate the G, cNG and SSC terms, respectively.
 - *compute_lensing_beyondLimber_SSC.py* evaluates the SSC term beyond the Limber approximation (for this one needs to run also the scripts in *compute_lensing_beyondLimber_flLp_table/* to generate some auxiliary data)
 
-In figures/ there are ploting scripts and the corresponding figures.
+In figures/ there are ploting scripts and figures.
 
 
 ### Gallery
