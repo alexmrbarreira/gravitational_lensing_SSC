@@ -33,5 +33,5 @@ In figures/ there are ploting scripts and the corresponding figures.
 
 Maps of the SSC and G+cNG contributions
 
-<img src="figures/fig_cov_l1l2_maps" width="1000" height=auto/>
+<img src="figures/fig_cov_l1l2_maps.png" width="1000" height=auto/>
 
