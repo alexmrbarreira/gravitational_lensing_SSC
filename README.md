@@ -43,3 +43,7 @@ Contributions along the diagonal and impact on the signal-to-noise ratio
 
 <img src="figures/fig_cov_l1l2_diagonal.png" width="1000" height=auto/>
 
+Scale and redshift dependence of the two first-order power spectrum response functions that determine the SSC term
+
+<img src="figures/fig_R1RK.png" width="1000" height=auto/>
+
