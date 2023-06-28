@@ -8,8 +8,8 @@ l1_touse = l1_array[index_l1]
 # ================================================================================ #
 # Compute table for f(l,L,p) (see notes and/or paper on lensing SSC)
 # ================================================================================ #
-print 'Constructing f(l,L,p) table ... '
-print ' ...... doing ell = ', l1_touse, 'which is index', index_l1
+print ('Constructing f(l,L,p) table ... ')
+print (' ...... doing ell = ', l1_touse, 'which is index', index_l1)
 
 # Get D(z) interpolator ; D(z=0)=1
 k_dummy  = 0.1
@@ -55,19 +55,19 @@ f_lLp_table         = zeros([len(L_array), len(log10p_array_coarse)])
 f_lLp_table_2deriv  = zeros([len(L_array), len(log10p_array_coarse)])
 
 for i2 in range(len(L_array)):
-    t0 = time.clock()
-    print i2, 'of', len(L_array)
+    t0 = time.time()
+    print (i2, 'of', len(L_array))
     for i3 in range(len(log10p_array_coarse)):
 
         f_lLp_table[i2,i3]        =        f_lLp(l1_touse, L_array[i2], log10p_array_coarse[i3])
         f_lLp_table_2deriv[i2,i3] = f_lLp_2deriv(l1_touse, L_array[i2], log10p_array_coarse[i3])
 
-    t1 = time.clock()
-    print 'This took ', t1-t0, 'sec'
+    t1 = time.time()
+    print ('This took ', t1-t0, 'sec')
 
-print 'Writing table to file ... '
+print ('Writing table to file ... ')
 # Write table without the derivative terms
-fout = open('data_f_lLp_lindex_' + str(index_l1) + '.dat', 'w')
+fout = open('data_f_lLp/data_f_lLp_lindex_' + str(index_l1) + '.dat', 'w')
 for i2 in range(len(L_array)):
     for i3 in range(len(log10p_array_coarse)):
         fout.write(str(f_lLp_table[i2,i3])); fout.write(' ');
@@ -75,7 +75,7 @@ for i2 in range(len(L_array)):
 fout.close()
 
 # Write table with the derivative terms only
-fout = open('data_f_lLp_2deriv_lindex_' + str(index_l1) + '.dat', 'w')
+fout = open('data_f_lLp_2deriv/data_f_lLp_2deriv_lindex_' + str(index_l1) + '.dat', 'w')
 for i2 in range(len(L_array)):
     for i3 in range(len(log10p_array_coarse)):
         fout.write(str(f_lLp_table_2deriv[i2,i3])); fout.write(' ');

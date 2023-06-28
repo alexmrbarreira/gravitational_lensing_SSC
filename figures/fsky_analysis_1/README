@@ -1,8 +1,0 @@
-
-
-    The scripts in this folder run compute_lensing_SSC.py and compute_lensing_beyondLimber_SSC.py for varying values of f_sky
-
-
-    The file setup_scripts.py is not handling everything. Some things in the scripts need to be adjusted by hand
-
-

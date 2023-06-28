@@ -3,7 +3,7 @@ from prepare_for_lenscov import *
 # ================================================================================ #
 # Do variance integrals 
 # ================================================================================ #
-print 'Doing variance integrals ... '
+print ('Doing variance integrals ... ')
 pperp_array   = 10.**linspace(log10(0.2*100./c_light), 3.0, 10000)
 
 # Do variance integrals
@@ -17,7 +17,7 @@ for i in range(len(chi_array)):
 
     varint_A_chi[i] = integrate.trapz(integrand_A_now, log(pperp_array))/2./pi
 
-# For isotropic window functions and averaging also over theta_12, all variance integrals are related in this way (see mathematica notebook)
+# For isotropic window functions and averaging also over theta_12, all variance integrals are related in this way
 varint_B_chi = (1./36) * varint_A_chi
 varint_C_chi =  (1./6) * varint_A_chi
 varint_D_chi =  (1./6) * varint_A_chi
@@ -25,7 +25,7 @@ varint_D_chi =  (1./6) * varint_A_chi
 # ================================================================================ #
 # Do chi integrals 
 # ================================================================================ #
-print 'Doing chi integrals ... '
+print ('Doing chi integrals ... ')
 
 cov_l1l2_A = zeros([len(l1_array), len(l2_array)])
 cov_l1l2_B = zeros([len(l1_array), len(l2_array)])
@@ -34,7 +34,7 @@ cov_l1l2_D = zeros([len(l1_array), len(l2_array)])
 
 # Loop over l1 and l2 values
 for m in range(len(l1_array)):
-    print m, 'of', len(l1_array), '; it gets faster though ... '
+    print (m, 'of', len(l1_array), '; it gets faster though ... ')
     for n in range(m, len(l2_array)):
         k1_now = (l1_array[m]+0.5)/chi_array
         k2_now = (l2_array[n]+0.5)/chi_array
@@ -73,7 +73,7 @@ for m in range(len(l1_array)):
 # ================================================================================ #
 # Symmetrize and write matrices
 # ================================================================================ #
-print 'Symmetrizing and writing matrices and data vector ... '
+print ('Symmetrizing and writing matrices ... ')
 
 cov_l1l2_A = symmetrize_matrix(cov_l1l2_A)
 cov_l1l2_B = symmetrize_matrix(cov_l1l2_B)

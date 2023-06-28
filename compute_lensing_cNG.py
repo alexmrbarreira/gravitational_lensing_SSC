@@ -118,13 +118,13 @@ def covNG_resp(k1, k2, z):
 # ================================================================================ #
 # Do chi integrals 
 # ================================================================================ #
-print 'Doing chi integral ... '
+print ('Doing chi integral ... ')
 
 cov_l1l2 = zeros([len(l1_array), len(l2_array)])
 
 # Loop over l1 and l2 values
 for m in range(len(l1_array)):
-    print m, 'of', len(l1_array), '; it gets faster though ... '
+    print (m, 'of', len(l1_array), '; it gets faster though ... ')
     for n in range(m, len(l2_array)):
         integrand_now = zeros(len(chi_array))
         for i in range(1,len(chi_array)):
@@ -139,7 +139,7 @@ for m in range(len(l1_array)):
 # ================================================================================ #
 # Symmetrize and write matrices
 # ================================================================================ #
-print 'Symmetrizing and writing matrices ... '
+print ('Symmetrizing and writing matrices ... ')
 
 cov_l1l2 = symmetrize_matrix(cov_l1l2)
 

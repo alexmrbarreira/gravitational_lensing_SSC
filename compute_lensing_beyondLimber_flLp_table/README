@@ -1,11 +1,15 @@
 
-This folder contains scripts that will compute the flLp table. Because this is slow (oscillating integrands), it is split into a script per value of ell.
+	This folder contains scripts that will compute the flLp table. Because this is slow (oscillating integrands), it is split into a script per value of ell.
 
 
-compute_lensing_beyondLimber_flLp_table_masterfiletocopy.py   :: This is the master script that will be copied and tailored to deal with a specific ell value
+	compute_lensing_beyondLimber_flLp_table_masterfiletocopy.py   :: This is the master script that will be copied and tailored to deal with a specific ell value
 
-setup_script.py                                               :: This file prepares a script to deal with every entry of the chosen l1_array in ../prepare_for_lenscov.py
+	setup_script.py                                               :: This file prepares a script to deal with every entry of the chosen l1_array in ../prepare_for_lenscov.py
 
-compute_lensing_beyondLimber_flLp_table_index_*               :: Each of these files does the calculation for each given ell value and writes the corresponding flLp that will be read by 
-                                                                 the covariance file ../compute_lensing_beyondLimber_SSC.py
+	compute_lensing_beyondLimber_flLp_table_index_*               :: Each of these files does the calculation for each given ell value and writes the corresponding flLp that will be read by 
+        	                                                         the covariance file ../compute_lensing_beyondLimber_SSC.py
+
+
+	Can use the scripts submit_script_*.py to run sets of 5 of these at once, which will trivially parallelize the calculation accross available cores.
+
 

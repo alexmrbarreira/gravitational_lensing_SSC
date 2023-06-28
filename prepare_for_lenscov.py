@@ -162,10 +162,6 @@ epsrel_sigma = 1.0e-2 # Relative accuracy of sigma integrals
 # Other functions
 # ============================================================== #
 
-# Spherical Bessel function
-def jell(ell, x): #spherical Bessel function 
-    return special.spherical_jn(int(ell), x, derivative=False)
-
 # Function that writes covariances to files
 def covwriter_matrix(cov_2d_array, filepath):
     fout = open(filepath, 'w')

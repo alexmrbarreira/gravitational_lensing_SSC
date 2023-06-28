@@ -1,9 +1,10 @@
 from prepare_for_lenscov import *
 
 # ================================================================================ #
-# Compute power spectrum 
+# Compute lensing power spectrum 
 # ================================================================================ #
-print 'Computing power spectrum and Gaussian covariance ... '
+
+print ('Computing power spectrum and Gaussian covariance ... ')
 C_l1 = zeros(len(l1_array))
 for m in range(len(l1_array)):
     z_array       = zofchi_int(chi_array)
@@ -12,6 +13,7 @@ for m in range(len(l1_array)):
     C_l_integrand = Pnl_l1 * gkernel_array**2. / chi_array**2.
     C_l1[m]       = integrate.trapz(C_l_integrand, chi_array)
 
+# Shape noise
 Clnoise  = sigma_eps**2./sounumden/2.
 
 cov_l1l2        = zeros([len(l1_array), len(l1_array)])
@@ -25,7 +27,8 @@ for i in range(len(l1_array)):
 # ================================================================================ #
 # Symmetrize and write matrices
 # ================================================================================ #
-print 'Writing matrices and data vector ... '
+
+print ('Writing matrices and data vector ... ')
 
 covwriter_matrix(cov_l1l2       , 'data_store/data_g_cov_l1l2.dat')
 covwriter_matrix(cov_l1l2_wnoise, 'data_store/data_g_cov_l1l2_wnoise.dat')

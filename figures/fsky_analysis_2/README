@@ -1,9 +1,0 @@
-
-
-
-      The scripts in this folder are make similar fsky tests as those in fsky_analysis_1.
-
-      In this folder, one focuses on a single (l1,l2) pair but more fsky values and has a look also at integrands to help understand some results
-
-
-      There are three copies of the files, labeled "a", "b" and "c"; they correspond to different l1=l2 values
