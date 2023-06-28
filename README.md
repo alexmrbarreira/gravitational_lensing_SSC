@@ -1,4 +1,4 @@
-# Super-sample covariance of weak lensing power spectra
+# Super-sample covariance of lensing power spectra
 
 
 #### Dependencies
