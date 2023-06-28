@@ -4,7 +4,7 @@ This code was used in the numerical analysis of the paper:
 
 - [Barreira, Krause & Schmidt 2018a](https://arxiv.org/abs/1711.07467), *Complete super-sample lensing covariance in the response approach*
 
-It evaluates the lensing power spectrum covariance matrix including all physical contributions: Gaussian (G), connected non-Gaussian (cNG, up to 1-loop terms) and super-sample covariance (SSC). For the G and cNG terms, it assumes the Limber approximation, but for the SSC term it does also a beyond-Limber calculation.
+It evaluates the lensing power spectrum covariance matrix including all physical contributions: Gaussian (G), connected non-Gaussian (cNG, up to 1-loop terms) and super-sample covariance (SSC). For the G and cNG terms, it assumes the Limber approximation, but for the SSC term it does also a beyond-Limber full-sky calculation.
 
 This code was subsequently incorporated into the cosmological likelihood analysis code [CosmoLike](https://github.com/CosmoLike/CosmoCov), and later used in
 
@@ -15,30 +15,23 @@ to demonstrate the accuracy of analytical approaches to the covariance matrix fo
 
 ### Dependencies
 
-
 - python: numpy, scipy, matplotlib
 - python: healpy (pip install --user healpy), for Healpix-format mask operations
 
 ### Code overview
 
-- The files parameters.py and functions.py define global parameters, variables and functions
-- The scripts in compute_cov/ execute the covariance calculation
-- The scripts in plots/ make plots (figures are stored here too).
+- *prepare_for_lensing.py* defines global parameters, variables and functions
+- *compute_lensing_G.py* evaluates the G term
+- *compute_lensing_cNG.py* evaluates the cNG term
+- *compute_lensing_SSC.py* evaluates the SSC term
+- *compute_lensing_beyondLimber_SSC.py* evaluates the SSC term beyond the Limber approximation (for this one needs to run also the scripts in *compute_lensing_beyondLimber_flLp_table/* to generate some auxiliary data)
+
+In figures/ there are ploting scripts and the corresponding figures.
+
 
 ### Gallery
 
-Summary of the kinematic regimes in $k_1-k_2$ space
+Maps of the SSC and G+cNG contributions
 
-<img src="plots/fig_regimes_v2.png" width="1000" height=auto/>
+<img src="figures/fig_cov_l1l2_maps" width="1000" height=auto/>
 
-Stitching of the tree-level standard perturbation theory (SPT) and response results
-
-<img src="plots/fig_tree_transition_mono.png" width="1000" height=auto/>
-
-Contributions along the diagonal
-
-<img src="plots/fig_covariance_diagonal_mono.png" width="600" height=auto/>
-
-Response functions used in the calculation
-
-<img src="plots/fig_responses_eul.png" width="1000" height=auto/>
