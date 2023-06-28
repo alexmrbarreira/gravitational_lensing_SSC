@@ -2,13 +2,13 @@
 
 This code was used in the numerical analysis of the paper:
 
-- Barreira, Krause & Schmidt 2018a, https://arxiv.org/abs/1711.07467, *Complete super-sample lensing covariance in the response approach*
+- [Barreira, Krause & Schmidt 2018a](https://arxiv.org/abs/1711.07467) *Complete super-sample lensing covariance in the response approach*
 
 It evaluates the lensing power spectrum covariance matrix including all physical contributions: Gaussian (G), connected non-Gaussian (cNG, up to 1-loop terms) and super-sample covariance (SSC). For the G and cNG terms, it assumes the Limber approximation, but for the SSC term it does also a beyond-Limber calculation.
 
 This code was subsequently incorporated into the cosmological likelihood analysis code [CosmoLike](https://github.com/CosmoLike/CosmoCov). This was later used in
 
-- Barreira, Krause & Schmidt 2018b, https://arxiv.org/abs/1807.04266, *Accurate cosmic shear errors: do we need ensembles of simulations?*
+- [Barreira, Krause & Schmidt 2018b](https://arxiv.org/abs/1807.04266) *Accurate cosmic shear errors: do we need ensembles of simulations?*
 
 to demonstrate the accuracy of analytical approaches to the covariance matrix for analyses of current and future large imaging galaxy surveys like DES, Euclid and Vera Rubin.
 
