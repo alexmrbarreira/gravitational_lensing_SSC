@@ -35,6 +35,10 @@ Maps of the SSC and G+cNG contributions
 
 <img src="figures/fig_cov_l1l2_maps.png" width="1000" height=auto/>
 
+Impact of full-sky and beyond Limber corrections to the SSC term
+
+<img src="figures/fsky_analysis/fig_integrands.png" width="1000" height=auto/>
+
 A few slices of the covariance matrix terms
 
 <img src="figures/fig_cov_l1l2_slices.png" width="1000" height=auto/>
