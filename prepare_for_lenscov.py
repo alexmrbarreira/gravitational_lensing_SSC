@@ -9,7 +9,7 @@ import os
 rcParams.update({'text.usetex': False, 'mathtext.fontset': 'stix'})
 warnings.filterwarnings("ignore", category=DeprecationWarning)
 
-lpath = '/home/barreira/a.Other/d-github_somework/b-gravitational_lensing_SSC/' 
+lpath = '/home/barreira/a.Other/d-github_workrepos/b-gravitational_lensing_SSC/' 
 
 # ==================================================== #
 # Compute z(chi) relation
